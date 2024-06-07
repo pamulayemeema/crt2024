@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<math.h>
+int main() {
+  int n,d,r=0,t;
+  scanf("%d",&n);
+  t=n;
+  while(n>0)
+  {
+      d=n%10;
+      n=n/10;
+      r=r*10+d;
+  }
+  if(r==t)
+  {
+      printf("palindrome");
+  }
+  else
+  {
+      printf("not a palindrome");
+  }
+  
+  return 0;
+}
+
+----------------------------
+1234321
+palindrome
+------------------------------
