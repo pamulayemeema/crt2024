@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<math.h>
+int main() {
+int n,d,r=0;  //n=number
+scanf("%d",&n);
+while(n>0)
+{
+   d=n%10; //retrieve
+   n=n/10; //remove
+   r=r*10+d;  //present=(previous*10)+present
+}  
+printf("%d",r);
+  return 0;
+}
+-------------------------
+12345
+54321
+---------------------------
