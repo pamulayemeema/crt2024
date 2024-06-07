@@ -1,0 +1,28 @@
+
+====================================================================
+#include <stdio.h>
+#include<math.h>
+int main() {
+int n,d,s=0,t;  //n=number
+scanf("%d",&n);
+t=n;
+while(n>0)
+{
+   d=n%10; //retrieve
+   n=n/10; //remove
+   s=s+d*d*d;
+} 
+if(s==t)
+{
+    printf("Amstrong number");
+}
+else
+{
+    printf("Not Amstrong number"); 
+}
+  return 0;
+}
+------------------
+153
+Amstrong number
+---------------------
