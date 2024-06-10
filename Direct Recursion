@@ -1,0 +1,148 @@
+1.Tail Recursion
+
+  print num from n to 1
+
+  // Online C compiler to run C program online
+#include <stdio.h>
+ void fun(int n)
+ {
+     if(n>=1)
+     {
+         printf("%d\n",n);
+         fun(n-1);
+     }
+ }
+int main() 
+{
+   int n;
+   scanf("%d",&n);
+   fun(n);
+
+    return 0;
+}
+
+
+6
+6
+5
+4
+3
+2
+1
+
+========================================================================
+  2.Head Recursion
+
+  print num from  1 to n
+
+  // Online C compiler to run C program online
+#include <stdio.h>
+ void fun(int n)
+ {
+     if(n>=1)
+     {
+          fun(n-1);
+         printf("%d\n",n);
+     }
+ }
+int main() 
+{
+   int n;
+   scanf("%d",&n);
+   fun(n);
+
+    return 0;
+}
+
+6
+1
+2
+3
+4
+5
+6
+  =================================================================
+  3. Tree Recursion
+
+  // Online C compiler to run C program online
+#include <stdio.h>
+ void fun(int n)
+ {
+     if(n>=1)
+     {
+          
+         printf("%d\n",n);
+         fun(n-1);
+         fun(n-1);
+     }
+ }
+int main() 
+{
+   int n;
+   scanf("%d",&n);
+   fun(n);
+
+    return 0;
+}
+
+3
+3
+2
+1
+1
+2
+1
+1
+
+============================================================================
+  4.Nested Recursion
+
+  // Online C compiler to run C program online
+#include <stdio.h>
+ int fun(int n)
+ {
+     if(n>100)
+      return (n-10);
+    return fun(fun(n+11));
+    
+ }
+int main() 
+{
+
+   int n=fun(95);
+   printf("%d",n);
+   return 0;
+}
+
+91
+===================================================================================================
+ =================================================================================================================
+  InDirect Recursion
+
+  // Online C compiler to run C program online
+#include <stdio.h>
+void funA(int);
+void funB(int);
+void funA(int n)
+ {
+     if(n>=0)
+     {
+         printf("%d ",n);
+         funB(n-1);
+     }
+ }
+ void funB(int n)
+ {
+     if(n>=1){
+       printf("%d ",n);
+       funA(n/2);
+     }
+ }
+int main() {
+    funA(20);
+   
+}
+
+
+20 19 9 8 4 3 1 
+  --------------------------------------------------------
