@@ -1,0 +1,137 @@
+1.mxn matrix
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() {
+ int m,n;
+ scanf("%d%d",&m,&n);
+ int a[m][n];
+  int i,j;
+  for(i=0;i<m;i++)
+  {
+      for(j=0;j<n;j++)
+      scanf("%d",&a[i][j]);
+  }
+  for(i=0;i<m;i++)
+  {
+      for(j=0;j<n;j++)
+      printf("%d",a[i][j]);
+      printf("\n");
+  }
+       return 0;
+}
+
+
+2 2
+1 2 3 4
+12
+34
+==============================================================================
+2.Transpose of matrix(mxn)
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() {
+ int m,n;
+ scanf("%d%d",&m,&n);
+ int a[m][n];
+  int i,j;
+  for(i=0;i<m;i++)
+  {
+      for(j=0;j<n;j++)
+      scanf("%d",&a[i][j]);
+  }
+  for(i=0;i<m;i++)
+  {
+      for(j=0;j<n;j++)
+      printf("%d",a[j][i]);
+      printf("\n");
+  }
+       return 0;
+}
+
+2 2
+1 2 3 4
+13
+24
+=====================================================================================
+3.sum of mxn matrix
+#include <stdio.h>
+int main() {
+ int m,n,s=0;
+ scanf("%d%d",&m,&n);
+ int a[m][n];
+  int i,j;
+  for(i=0;i<m;i++)
+  {
+      for(j=0;j<n;j++)
+      scanf("%d",&a[i][j]);
+  }
+  for(i=0;i<m;i++)
+  {
+      for(j=0;j<n;j++)
+     s=s+a[i][j];
+     
+  }
+  printf("%d",s);
+       return 0;
+}
+
+2 2
+1 2 3 4
+10
+==========================================================================================
+4.sum of diagonal matrix or trace of matrix of nxn matrix
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() {
+ int n,s=0;
+ scanf("%d",&n);
+ int a[n][n];
+  int i,j;
+  for(i=0;i<n;i++)
+  {
+      for(j=0;j<n;j++)
+      scanf("%d",&a[i][j]);
+  }
+  for(i=0;i<n;i++)
+   {
+       for(j=0;j<n;j++)
+      {
+        if(i==j)
+        s=s+a[i][j];
+      }
+   }
+  printf("%d",s);
+       return 0;
+}
+3
+1 2 3 4 5 6 7 8 9
+15
+=================================================================================================
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() {
+ int n,s=0;
+ scanf("%d",&n);
+ int a[n][n];
+  int i,j;
+  for(i=0;i<n;i++)
+  {
+      for(j=0;j<n;j++)
+      scanf("%d",&a[i][j]);
+  }
+  for(i=0;i<n;i++)
+   {
+       for(j=0;j<n;j++)
+      {
+        if(i+j==n-1)
+        s=s+a[i][j];
+      }
+   }
+  printf("%d",s);
+       return 0;
+}
+
+4
+1 2 3 4 5 6 7 8 9 3 6 4 2 1 5 3
+16
+============================================================================
