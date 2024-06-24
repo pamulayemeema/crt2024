@@ -1,0 +1,49 @@
+In a blind organization, they were playing the typing a keyword game and they want to correct the form of the word. So help them to by writing a program to remove all special symbols and print the characters of a string.
+
+Input Format
+
+Input consists of a string.
+
+Constraints
+
+Assume the maximum length of the string is 200. The characters in the string can contain both uppercase, lowercase, and symbols.
+
+Output Format
+
+print only alphabets string
+
+Sample Input 0
+
+pro$#&gra7m
+Sample Output 0
+
+program
+Sample Input 1
+
+Th%is is m67$y pro***gram
+Sample Output 1
+
+This is my program
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char s[50],s1[50];
+    scanf("%[^\n]s",s);
+    int i,j=0;
+    for(i=0;i<strlen(s);i++)
+    {
+        if((s[i]>=65&&s[i]<=90)||(s[i]>=97&&s[i]<=122)||(s[i]==' ')){
+            s1[j]=s[i];
+            j++;
+        }
+    }
+    s1[j]='\0';
+    printf("%s",s1);
+    return 0;
+}
