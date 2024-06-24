@@ -1,0 +1,42 @@
+Given a string containing alphanumeric characters, calculate the sum of all numbers present in the string.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+Print Sum of digits in a string
+
+Sample Input 0
+
+1abc23
+Sample Output 0
+
+6
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char s[50];
+    scanf("%s",s);
+    int sum=0,i;
+    int n=strlen(s);
+    for(i=0;i<n;i++)
+    {
+        if(s[i]>=48 &&s[i]<=57)
+        {
+            sum+=(s[i]-48);
+        }
+    }
+    printf("%d",sum);
+    return 0;
+}
