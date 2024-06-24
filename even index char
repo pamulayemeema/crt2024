@@ -1,0 +1,53 @@
+Accept string from the user and display only those characters which are present at an even index
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+Printing the Even Index Positions and its value one by one
+
+Sample Input 0
+
+python
+Sample Output 0
+
+0 p
+2 t
+4 o
+Sample Input 1
+
+Programming
+Sample Output 1
+
+0 P
+2 o
+4 r
+6 m
+8 i
+10 g
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char s[50];
+    int i;
+    scanf("%[^\n]s",s);
+    for(i=0;i<strlen(s);i++)
+    {
+        if(i%2==0)
+        {
+            printf("%d %c\n",i,s[i]);
+        }
+    }
+    return 0;
+}
